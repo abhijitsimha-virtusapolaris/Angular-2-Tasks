@@ -1,0 +1,33 @@
+<!-- 3) If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+Find the sum of all the multiples of 3 or 5 below 1000.
+Input: 10
+Output: 23
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function show(){
+
+var x, no;
+var sum = 0;
+no=Number(document.getElementById("num").value);
+
+for (var x = 0; x < no; x++)
+{
+    if (x % 3 === 0 || x % 5 === 0)
+    {
+       sum += x;
+    }
+}
+document.getElementById("answer").innerHTML= sum;
+}
+</script>
+</head>
+<body>
+Enter Num: <input id="num">
+<button onclick="show()">Sum of all mulltiples of 3 and 5</button>
+<p id="answer"></p>
+</body>
+</html>

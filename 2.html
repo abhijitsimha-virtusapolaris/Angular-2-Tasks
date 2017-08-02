@@ -1,0 +1,27 @@
+<!-- 2) If we list all the natural numbers till 10 i.e. 1 to 10, the sum of these numbers is 55. Find the sum of the first 500 natural numbers.
+Input: 10
+Output: 45 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function show(){
+
+var i, no;
+var sum = 0;
+no=Number(document.getElementById("num").value);
+for(i=1; i<=no; i++)  
+{
+sum = sum + i;
+}  
+document.getElementById("answer").innerHTML= sum;
+}
+</script>
+</head>
+<body>
+Enter Num: <input id="num">
+<button onclick="show()">Sum</button>
+<p id="answer"></p>
+</body>
+</html>

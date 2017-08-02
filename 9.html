@@ -1,0 +1,35 @@
+<!--  Write a function to check whether a given string is a palindrome or not.
+Input: "Mom"
+Output: true
+Input: "sister"
+Output: false
+ -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function palindrome() {
+str=String(document.getElementById("str").value);
+    var len = str.length;
+    for ( var i = 0; i < Math.floor(len/2); i++ ) {
+        if (str[i] !== str[len - 1 - i]) {
+        	    document.getElementById("answer").innerHTML= 'false';
+            return false;
+        }
+    }
+    document.getElementById("answer").innerHTML= 'true';
+    return true;
+
+
+
+}
+</script>
+</head>
+<body>
+Enter Num: <input id="str">
+<button onclick="palindrome()">check Palindrome</button>
+<p id="answer"></p>
+</body>
+</html>
